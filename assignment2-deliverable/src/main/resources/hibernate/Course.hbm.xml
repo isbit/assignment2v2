@@ -3,21 +3,15 @@
   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping> 
-  <class name="no.uio.inf5750.assignment2.model.Student" table="students">
+  <class name="no.uio.inf5750.assignment2.model.Degree" table="degrees">
     <id name="id">
       <generator class="native"/>
     </id>
     <property name="name" not-null="true" unique="true"/>
     
-    <set name="courses" inverse="true" table="studentCourses" cascade="save-update">
-  		<key column="studentId"></key>
+    <set name="requiredCourses" table="requiredCourses" cascade="save-update">
+  		<key column="degreeId"></key>
   		<many-to-many class="no.uio.inf5750.assignment2.mode.Course" column="courseId"></many-to-many>
   	</set>  
-  	
-    <set name="degrees" table="studentDegrees" cascade="save-update">
-  		<key column="studentId"></key>
-  		<many-to-many class="no.uio.inf5750.assignment2.mode.Degree" column="degreeId"></many-to-many>
-  	</set>  
-    
   </class>
 </hibernate-mapping>

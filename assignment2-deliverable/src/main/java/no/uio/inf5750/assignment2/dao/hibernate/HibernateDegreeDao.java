@@ -2,13 +2,13 @@ package no.uio.inf5750.assignment2.dao.hibernate;
 
 import java.util.Collection;
 
+import no.uio.inf5750.assignment2.dao.DegreeDAO;
+import no.uio.inf5750.assignment2.model.Degree;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import no.uio.inf5750.assignment2.dao.StudentDAO;
-import no.uio.inf5750.assignment2.model.Student;
-
-public class HibernateStudentDao implements StudentDAO {
+public class HibernateDegreeDao implements DegreeDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -21,35 +21,33 @@ public class HibernateStudentDao implements StudentDAO {
     {
         this.sessionFactory = sessionFactory;
     }
-	
+
 	@Override
-	public int saveStudent(Student student) {
+	public int saveDegree(Degree degree) {
 		// TODO Auto-generated method stub
-		//Her skal jeg ta det skapte studentobjektet og legge det inn i databasen.
-		
 		return 0;
 	}
 
 	@Override
-	public Student getStudent(int id) {
+	public Degree getDegree(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Student getStudentByName(String name) {
+	public Degree getDegreeByType(String type) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Student> getAllStudents() {
+	public Collection<Degree> getAllDegrees() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void delStudent(Student student) {
+	public void delDegree(Degree degree) {
 		// TODO Auto-generated method stub
 		
 	}

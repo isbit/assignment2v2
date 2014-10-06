@@ -1,13 +1,27 @@
-package no.uio.inf5750.assignment2.service.impl;
+	package no.uio.inf5750.assignment2.service.impl;
 
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import no.uio.inf5750.assignment2.dao.hibernate.HibernateCourseDao;
+import no.uio.inf5750.assignment2.dao.hibernate.HibernateDegreeDao;
+import no.uio.inf5750.assignment2.dao.hibernate.HibernateStudentDao;
 import no.uio.inf5750.assignment2.model.Course;
 import no.uio.inf5750.assignment2.model.Degree;
 import no.uio.inf5750.assignment2.model.Student;
 import no.uio.inf5750.assignment2.service.StudentSystem;
 
 public class DefaultStudentSystem implements StudentSystem {
+
+	@Autowired
+	private HibernateCourseDao courseDao;
+
+	@Autowired
+	private HibernateDegreeDao degreeDao;
+
+	@Autowired 
+	private HibernateStudentDao studentDao;
 
 	@Override
 	public int addCourse(String courseCode, String name) {

@@ -12,6 +12,9 @@ import no.uio.inf5750.assignment2.model.Student;
  */
 public interface StudentSystem
 {
+	
+	
+	
     /**
      * Adds a course.
      * 
