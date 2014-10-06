@@ -7,7 +7,7 @@ import no.uio.inf5750.assignment2.model.Degree;
 import no.uio.inf5750.assignment2.model.Student;
 import no.uio.inf5750.assignment2.service.StudentSystem;
 
-public class DefaultStudentSytem implements StudentSystem {
+public class DefaultStudentSystem implements StudentSystem {
 
 	@Override
 	public int addCourse(String courseCode, String name) {
